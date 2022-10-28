@@ -6,7 +6,7 @@
     "start": "node ./bin/www"
   },
   "engines": {
-    "node": "^12.18.3",
+    "node": "^10.15.0",
     "npm": "^6.0.0"
   },
   "dependencies": {

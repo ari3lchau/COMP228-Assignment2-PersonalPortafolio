@@ -1,0 +1,49 @@
+<%- include partials/header.ejs%>
+
+
+    <link rel='stylesheet' href='/stylesheets/style2.css' />
+    
+  </head>
+  <body>
+
+    <nav>
+      <ul>
+        <img class="logo" src="images/Logo.png" alt="logo photo">
+        <li><a  href="index"><i class="fa-solid fa-house"></i>Home</a></li> 
+        <!--<a href="about"><i class="fa-solid fa-address-card"></i>About</a></li>-->
+        <li><a class="home" href="aboutme"><i class="fa-solid fa-id-badge"></i>About Me</a></li> 
+        <li><a href="projectpage"><i class="fa-solid fa-diagram-project"></i>Projects</a></li>
+        <li><a href="service"><i class="fa-solid fa-brands fa-servicestack"></i>Services</a></li> 
+        <li><a href="individual-list"><i class="fa-solid fa-brands fa-servicestack"></i>Business List</a></li> 
+        <li><a href="contact"><i class="fa-solid fa-message"></i>Contact</a></li>
+        <% if(typeof displayName == 'string' && displayName){ %>
+      <li class="navbar-text"><i class="fas fa-lg fa-user"></i>Welcome, <%= displayName %></li>
+      <li class="nav-item"><a href="/logout" class="nav-link">
+        <i class="fas fa-lg fa-sign-out-alt"></i>Logout</a></li>
+    <% } else { %>
+      <li class="new-item"><a href="/login" class="nav-link">
+      <i class="fas fa-lg fa-sign-in-alt"></i> Login</a></li> 
+    <% } %>
+        
+      </ul>
+    </nav>
+
+    <hr>
+  
+    <main class="maincontainer">
+      <h1><%= title %></h1>
+        <div id="container">
+            <h1>Spontaneous Software Developer</h1>
+            <p id="ques">Who Am I? 🤔</p>
+            <p id="letter">I am Ariel Chau Zhou. Currently, I am student at Centennial College studying Software Engineering Technology. <br>I am  a motivated and ambitious student with a strong analytical and teamwork skills.
+            Continuous eager learner and  commited to self-learning. <br><br> I am confident with my skills in object-oriented software design, C#, Java, HTML/CSS, Javascript, Oracle, Agile cycle development, Unix/Linux, and other tools. <br>
+            Looking and working forward to become a full-stack developer, so that one day I can lead a team and share knowledge.  
+            <button><a href="ArielChau_Resume.pdf" target="_blank">Resume</a></button></p>
+        </div>
+        <div>
+            <img class="center" src="images/picture2.png" alt="picture 2 of ariel" width="200px">
+        </div>
+        
+        
+    </main>
+<%- include partials/footer.ejs%>

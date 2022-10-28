@@ -1,0 +1,145 @@
+/*--Ariel Chau Zhou
+    COMP229 008 
+    2022 Fall semester 
+    Portafolio Project 
+    #301151530   
+    2022/10/11   */
+*{
+    box-sizing: border-box;
+  }
+  body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+  
+  }
+  nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  nav li{
+    list-style: none;
+    padding-top: 7px;
+    margin-right: 20px;
+  
+  }
+  
+  nav li a{
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    display: block;
+  }
+  nav li a:hover{
+    color: orange;
+  }
+  .fa-solid{
+    margin-right: 8px;
+  }
+  .logo{
+    width: 55px;
+    border-radius: 10px;
+    margin-left: 15px;
+    margin-right: 60px;
+  }
+  .home{
+    color: orange;
+  }
+  
+  footer{
+    position: relative;
+    bottom: 0;
+    width: 98%;
+    height: 60px;
+    font-size: 15px;
+  
+  }
+  
+main{
+    margin: auto;
+    width: 880px;
+}
+div h1{
+    text-align: center;
+    color: orange;
+    font-size: 40px;
+}
+div p{
+    font-size: 19px;
+}
+form{
+    font-size: 20px;
+    
+}
+legend{
+    color: orange;
+}
+fieldset{
+    border-radius: 10px;
+}
+input{
+    width: 20rem;
+    padding: 6px;
+}
+table,tr,td{
+    
+}
+td{
+    padding: 10px;
+}
+button{
+    font-size: 22px;
+    background-image: linear-gradient(to right, #8360c3, #2ebf91);
+    border-radius: 7px;
+    font-weight: bold;
+    padding: 5px;
+    position: relative;
+    left: 50%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+  
+}
+button a{
+    color:white;
+    text-decoration: none;
+  }
+ button a:hover{
+    color: orange;
+  
+  }
+  button:hover{
+    animation-name: identifier1;
+    animation-duration: 1s;
+    
+  }
+#second-section{
+   
+    margin-right: 10px;
+    text-align: center;
+}
+#second-section a{
+    margin-left: 20px;
+    
+}
+#second-section a i{
+    font-size: 35px;
+    color: white;
+    
+}
+#second-section a i:hover{
+    color: orange;
+    
+}

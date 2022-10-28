@@ -1,0 +1,85 @@
+<!--Ariel Chau Zhou
+    COMP229 008 
+    2022 Fall semester 
+    Portafolio Project 
+    #301151530   
+    2022/10/11   -->
+
+<%- include ../partials/header.ejs%>    
+  <link rel='stylesheet' href='/stylesheets/style.css'/>       
+  </head>
+  <body>
+
+<nav>
+  <ul>
+    <img class="logo" src="images/Logo.png" alt="logo photo">
+    <li><a href="index"><i class="fa-solid fa-house"></i>Home</a></li> 
+    <!--<a href="about"><i class="fa-solid fa-address-card"></i>About</a></li>-->
+    <li><a href="aboutme"><i class="fa-solid fa-id-badge"></i>About Me</a></li> 
+    <li><a href="projectpage"><i class="fa-solid fa-diagram-project"></i>Projects</a></li>
+    <li><a href="service"><i class="fa-solid fa-brands fa-servicestack"></i>Services</a></li> 
+    <li><a href="individual-list" class="home"><i class="fa-solid fa-brands fa-servicestack"></i>Business List</a></li> 
+    <li><a href="contact"><i class="fa-solid fa-message"></i>Contact</a></li>  
+    <% if(typeof displayName == 'string' && displayName){ %>
+      <li class="navbar-text"><i class="fas fa-lg fa-user"></i>Welcome, <%= displayName %></li>
+      <li class="nav-item"><a href="/logout" class="nav-link">
+        <i class="fas fa-lg fa-sign-out-alt"></i>Logout</a></li>
+    <% } else { %>
+      <li class="new-item"><a href="/login" class="nav-link">
+      <i class="fas fa-lg fa-sign-in-alt"></i> Login</a></li> 
+    <% } %> 
+  </ul>
+</nav>
+<hr>  
+    <main>
+      <div>
+        <h1><%= title %></h1>
+
+        <% if(typeof displayName == "string" && displayName) { %>
+
+          <button><a href="/individual-list/add">Add a individual</a></button>
+        <% } %>
+        <br>
+        <table border="1">
+          <tr>
+          <% if(typeof displayName == "string" && displayName) { %>
+            <th>Name: </th>
+            <th>Address: </th>
+            <th>Email: </th>
+            <th></th>
+            <th></th>
+          <% } else{ %>
+            <th>Name: </th>
+            <th>Address: </th>
+            <th>Email: </th>
+          <% } %>
+          </tr>
+          <!--Repeatable code -->
+          <% for(let count = 0; count < IndividualList.length; count++){ %>
+
+            <tr>
+             <% if(typeof displayName == "string" && displayName) { %>
+                <td><%= IndividualList[count].name %></td>
+                <td><%= IndividualList[count].address %></td>
+                <td><%= IndividualList[count].email %></td>
+                <td>
+                  <button><a href="/individual-list/edit/<%= IndividualList[count].id %>">Edit</a></button>
+                </td>
+                <td>
+                  <button><a href="/individual-list/delete/<%= IndividualList[count].id %>" class="btn-danger">Delete</a></button>
+                </td>
+              <% } else { %>
+                <td><%= IndividualList[count].name %></td>
+                <td><%= IndividualList[count].address %></td>
+                <td><%= IndividualList[count].email %></td>
+              <% } %>
+            </tr>
+
+          <%} %>
+        </table>
+      </div>
+      
+      
+    </main>
+
+<%- include ../partials/footer.ejs%>

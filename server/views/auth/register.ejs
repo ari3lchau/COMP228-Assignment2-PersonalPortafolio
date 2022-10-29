@@ -1,6 +1,7 @@
 <%- include ../partials/header.ejs%> 
 
-<link rel='stylesheet' href='/stylesheets/style.css'/>       
+<link rel='stylesheet' href='/stylesheets/style.css'/>  
+<link rel='stylesheet' href='/stylesheets/styleindividual.css'/>         
   </head>
   <body>
 
@@ -36,41 +37,42 @@
 
    <% } %>
 
-   <div>
+  
+    <div class="container">
     <div>
         <h1>Please Register:</h1>
         <form method="POST" autocomplete="off">
-            <fieldset>
-                <label for="username">Username: </label>
-                <input type="text" name="username" placeholder="Enter username:" name="username" id="username" required autofocus>
-            </fieldset>
+        <table border=1>
+            <tr>
+                <td><label for="username">Username: </label></td>
+                <td><input type="text" name="username" placeholder="Enter username:" name="username" id="username" required autofocus></td>
+            </tr>
 
-            <fieldset>
-                <label for="password">Password: </label>
-                <input type="password" name="password" placeholder="Enter password: " id="password" name="password" required>
-            </fieldset>
+            <tr>
+                <td><label for="password">Password: </label></td>
+                <td><input type="password" name="password" placeholder="Enter password: " id="password" name="password" required></td>
+            </tr>
 
-            <fieldset>
-                <label for="email">Email: </label>
-                <input type="email" name="email" placeholder="Enter email addresss: " id="email" name="email" required>
-            </fieldset>
+            <tr>
+                <td><label for="email">Email: </label></td>
+                <td><input type="email" name="email" placeholder="Enter email addresss: " id="email" name="email" required></td>
+            </tr>
 
-            <fieldset>
-                <label for="displayName">Display Name: </label>
-                <input type="text" name="displayName" placeholder="Enter display Name: " id="displayName" required>
-            </fieldset>
+            <tr>
+                <td><label for="displayName">Display Name: </label></td>
+                <td><input type="text" name="displayName" placeholder="Enter display Name: " id="displayName" required></td>
+            </tr>
 
-            <fieldset>
-                <input type="submit" value="Register">
-                <a href="/">
-                    <input type="button" class="btn-warning" value="Cancel">
-                </a>
-            </fieldset>
+            <tr>
+                <td><input type="submit" value="Register"></td>
+                <td><a href="/"><input type="button" class="btn-warning" value="Cancel"></a></td>
+            </tr>
 
-
+        </table>
         </form>
+        </div>
     </div>
-   </div>
+
 
 </main>
 

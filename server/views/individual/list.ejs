@@ -6,11 +6,12 @@
     2022/10/11   -->
 
 <%- include ../partials/header.ejs%>    
-  <link rel='stylesheet' href='/stylesheets/style.css'/>       
+  <link rel='stylesheet' href='/stylesheets/style.css'/>     
+  <link rel='stylesheet' href='/stylesheets/styleindividual.css'/>     
   </head>
   <body>
 
-<nav>
+<nav class="container">
   <ul>
     <img class="logo" src="images/Logo.png" alt="logo photo">
     <li><a href="index"><i class="fa-solid fa-house"></i>Home</a></li> 
@@ -21,7 +22,7 @@
     <li><a href="individual-list" class="home"><i class="fa-solid fa-brands fa-servicestack"></i>Business List</a></li> 
     <li><a href="contact"><i class="fa-solid fa-message"></i>Contact</a></li>  
     <% if(typeof displayName == 'string' && displayName){ %>
-      <li class="navbar-text"><i class="fas fa-lg fa-user"></i>Welcome, <%= displayName %></li>
+      <li class="navbar-text"><i class="fas fa-lg fa-user"></i><span class="welcome-name">Welcome, <%= displayName %></span></li>
       <li class="nav-item"><a href="/logout" class="nav-link">
         <i class="fas fa-lg fa-sign-out-alt"></i>Logout</a></li>
     <% } else { %>
@@ -31,16 +32,16 @@
   </ul>
 </nav>
 <hr>  
-    <main>
+    <main class="container">
       <div>
         <h1><%= title %></h1>
 
         <% if(typeof displayName == "string" && displayName) { %>
 
-          <button><a href="/individual-list/add">Add a individual</a></button>
+          <button class="buttons-login"><a href="/individual-list/add">Add a individual</a></button>
         <% } %>
         <br>
-        <table border="1">
+        <table border="1" class="list-table">
           <tr>
           <% if(typeof displayName == "string" && displayName) { %>
             <th>Name: </th>
@@ -63,10 +64,10 @@
                 <td><%= IndividualList[count].address %></td>
                 <td><%= IndividualList[count].email %></td>
                 <td>
-                  <button><a href="/individual-list/edit/<%= IndividualList[count].id %>">Edit</a></button>
+                  <button class="buttons-login"><a href="/individual-list/edit/<%= IndividualList[count].id %>">Edit</a></button>
                 </td>
                 <td>
-                  <button><a href="/individual-list/delete/<%= IndividualList[count].id %>" class="btn-danger">Delete</a></button>
+                  <button class="buttons-login"><a href="/individual-list/delete/<%= IndividualList[count].id %>" class="btn-danger">Delete</a></button>
                 </td>
               <% } else { %>
                 <td><%= IndividualList[count].name %></td>

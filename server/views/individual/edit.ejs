@@ -1,5 +1,6 @@
 <%- include ../partials/header.ejs%> 
-<link rel='stylesheet' href='/stylesheets/style.css'/>       
+<link rel='stylesheet' href='/stylesheets/style.css'/>  
+<link rel='stylesheet' href='/stylesheets/styleindividual.css'/>       
   </head>
   <body>
 
@@ -14,7 +15,7 @@
     <li><a href="individual-list" class="home"><i class="fa-solid fa-brands fa-servicestack"></i>Business List</a></li> 
     <li><a href="contact"><i class="fa-solid fa-message"></i>Contact</a></li>   
     <% if(typeof displayName == 'string' && displayName){ %>
-      <li class="navbar-text"><i class="fas fa-lg fa-user"></i>Welcome, <%= displayName %></li>
+      <li class="navbar-text"><i class="fas fa-lg fa-user"><span class="welcome-name">Welcome, <%= displayName %></span></li>
       <li class="nav-item"><a href="/logout" class="nav-link">
         <i class="fas fa-lg fa-sign-out-alt"></i>Logout</a></li>
     <% } else { %>
@@ -29,23 +30,29 @@
         <h1><%= title%></h1>
 
         <form method="post" class="form">
-            <div>
-                <label for="nameTextField">Name: </label>
-                <input type="text" id="nameTextField" placeholder="Enter name: " name="name" value="<%= individual.name %>" required>
-            </div>
+        <table border=1>
+        
+            <tr>
+                <td><label for="nameTextField">Name: </label></td>
+                <td><input type="text" id="nameTextField" placeholder="Enter name: " name="name" value="<%= individual.name %>" required></td>
+            </tr>
     
-            <div>
-                <label for="addressTextField">Address: </label>
-                <input type="text" id="addressTextField" placeholder="Enter address: " name="address" value="<%= individual.address %>" required>
-            </div>
+            <tr>
+                <td><label for="addressTextField">Address: </label></td>
+                <td><input type="text" id="addressTextField" placeholder="Enter address: " name="address" value="<%= individual.address %>" required></td>
+            </tr>
     
-            <div>
-                <label for="emailTextField">Email: </label>
-                <input type="email" id="emailTextField" placeholder="Enter email: " name="email" value="<%= individual.email %>" required>
-            </div>
+            <tr>
+                <td><label for="emailTextField">Email: </label></td>
+                <td><input type="email" id="emailTextField" placeholder="Enter email: " name="email" value="<%= individual.email %>" required></td>
+            </tr>
     
-            <button type="submit">Submit</button>
-            <a href="/individual-list">Cancel</a>
+            <tr>
+              <td><button class="buttons-login" type="submit">Submit</button></td>
+              <td><button class="buttons-login"><a href="/individual-list">Cancel</a></button></td>
+            </tr>
+
+        </table>
         </form>
 
 

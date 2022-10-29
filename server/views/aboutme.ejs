@@ -17,7 +17,7 @@
         <li><a href="individual-list"><i class="fa-solid fa-brands fa-servicestack"></i>Business List</a></li> 
         <li><a href="contact"><i class="fa-solid fa-message"></i>Contact</a></li>
         <% if(typeof displayName == 'string' && displayName){ %>
-      <li class="navbar-text"><i class="fas fa-lg fa-user"></i>Welcome, <%= displayName %></li>
+      <li class="navbar-text"><i class="fas fa-lg fa-user"></i><span class="welcome-name">Welcome, <%= displayName %></span></li>
       <li class="nav-item"><a href="/logout" class="nav-link">
         <i class="fas fa-lg fa-sign-out-alt"></i>Logout</a></li>
     <% } else { %>

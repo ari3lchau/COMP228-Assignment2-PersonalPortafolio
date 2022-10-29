@@ -1,0 +1,40 @@
+body{
+    text-align: center;
+    
+}
+.container{
+    display: flex;
+    justify-content: center;
+    
+}
+table{
+    font-size: 20px;
+    padding: 5px;
+    margin: 10px;
+    width: 500px;
+}
+td{
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+h1{
+    color: orange;
+    font-size: 45px;
+}
+
+.buttons-login{
+font-size: 19px;
+  background-image: linear-gradient(to right, #8360c3, #2ebf91);
+  border-radius: 7px;
+  font-weight: bold;
+  padding: 5px;
+  cursor: pointer;
+}
+.list-table td{
+    padding: 5px;
+}
+
+.welcome-name{
+    color:gold;
+    padding-top: 27px;
+  }

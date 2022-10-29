@@ -1,5 +1,7 @@
 <%- include ../partials/header.ejs%> 
-<link rel='stylesheet' href='/stylesheets/style.css'/>       
+<link rel='stylesheet' href='/stylesheets/style.css'/>  
+<link rel='stylesheet' href='/stylesheets/styleindividual.css'/>    
+
   </head>
   <body>
 
@@ -26,7 +28,7 @@
 </nav>
 <hr> 
 
-<main>
+<main class="container">
     <% if(messages.length > 0){%>
         <div class="alert alert-danger">
             <%= messages %>
@@ -38,31 +40,34 @@
    <div>
     <div>
         <h1>Please Login:</h1>
-        <form method="POST" autocomplete="off">
-            <fieldset>
-                <label for="username">Username: </label>
-                <input type="text" name="username" placeholder="Enter username: " id="username" required autofocus>
-            </fieldset>
+          
+          <form method="POST" autocomplete="off">
+          <table border=1>
 
-            <fieldset>
-                <label for="password">Password: </label>
-                <input type="password" name="password" placeholder="Enter password: " id="password" required>
+              <tr>        
+                  <td><label for="username">Username: </label></td>
+                  <td><input type="text" name="username" placeholder="Enter username: " id="username" required autofocus></td>
+              </tr>
 
-                or 
-                <a href="/register">Register Here</a>
+              <tr>
+                  <td><label for="password">Password: </label></td>
+                  <td><input type="password" name="password" placeholder="Enter password: " id="password" required></td>
+              </tr>
+              
 
-                
-            </fieldset>
+              <tr>
+                  <td><input class="buttons-login" type="submit" value="Login"></td>
+                  <td><a   href="/"><input type="button" class="btn-warning buttons-login" value="Cancel"></td>
+                  </a>
+              </tr>
 
-            <fieldset>
-                <input type="submit" value="Login">
-                <a href="/">
-                    <input type="button" class="btn-warning" value="Cancel">
-                </a>
-            </fieldset>
+              <tr>
+                <td colspan="2"><button class="buttons-login"><a href="/register">Register Here</a></button></td>
+              </tr>
 
-
-        </form>
+            </table>
+          </form>
+        
     </div>
    </div>
 </main>

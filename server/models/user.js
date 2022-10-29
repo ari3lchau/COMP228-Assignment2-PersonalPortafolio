@@ -5,7 +5,7 @@ Student Id: 301151530
 Course Name: COMP 229 WEB Development
 File name: PERSONAL-PORTAFOLIO2
 WEB APP NAME:https://comp229-008-301151530portfolio.herokuapp.com/
-Midterm lab Assignment
+assignment2 lab Assignment
 */
 let mongoose = require("mongoose");
 let passportLocalMongoose = require("passport-local-mongoose");
